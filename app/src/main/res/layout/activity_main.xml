@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1900ff00"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_rectangle"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/hello_world"
+        android:textColor="#673AB7"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/btn_circle"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ripple_circle_image"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="true"
+        android:onClick="clickCircleBtn"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shap_btn_rectangle"
+        android:elevation="16dp"
+        android:hapticFeedbackEnabled="true"
+        android:minHeight="36dp"
+        android:minWidth="60dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="This is a button!"
+        android:textColor="#fff" />
+
+
+    <Button
+        android:id="@+id/btn_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_rectangle"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_rectangle"
+        android:elevation="16dp"
+        android:hapticFeedbackEnabled="true"
+        android:minHeight="36dp"
+        android:minWidth="60dp"
+        android:onClick="clickBtn"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="I am a Button"
+        android:textColor="#fff" />
+
+    <ProgressBar
+        android:id="@+id/pb_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_float"
+        android:layout_marginTop="8dp" />
+
+    <ProgressBar
+        android:id="@+id/pb_horizontal"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_circle"
+        android:layout_marginTop="8dp"
+        android:progress="83" />
+
+    <SeekBar
+        android:id="@+id/sb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_horizontal"
+        android:layout_marginTop="8dp"
+        android:progress="40"
+        android:secondaryProgress="80" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb"
+        android:layout_marginTop="8dp"
+        android:hint="User Name"
+        android:imeActionLabel="User Name" />
+
+    <View
+        android:id="@+id/my_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/ripple_all"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:visibility="invisible" />
+
+    <include layout="@layout/base_dialog" />
+</RelativeLayout>
